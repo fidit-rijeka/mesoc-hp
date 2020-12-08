@@ -1,0 +1,275 @@
+@import 'colors';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-weight: 400;
+  color: $textDark;
+}
+
+body {
+  font-family: 'Rubik', sans-serif;
+  background: $background;
+  height: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.generalH1 {
+  font-size: 2.2rem;
+  font-weight: 500;
+  align-self: center;
+  margin-top: 3em;
+}
+
+.generalH2 {
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 1em;
+}
+
+/*   ------   NAVBAR   ------   */
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 60px;
+  background: $white;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 5%;
+  box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.04);
+
+  .logoA {
+    margin-right: auto;
+
+    .logo {
+      width: 56px;
+    }
+  }
+
+  .mainA {
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-decoration: none;
+    padding: .7em;
+    margin-right: 1.8em;
+
+    &:hover {
+      color: $textDarkHover;
+      transition: .2s;
+    }
+  }
+
+  .secondaryA {
+    font-weight: 500;
+    font-size: .95rem;
+    text-decoration: none;
+    padding: .7em;
+    margin-left: .5em;
+    color: $buttonPurple;
+
+    &:hover {
+      color: $buttonPurpleHover;
+      transition: .2s;
+    }
+  }
+}
+
+/*   ------   FOOTER   ------   */
+
+footer {
+  width: 100%;
+  background: $sidenavBlue;
+  display: flex;
+  align-items: center;
+  padding: 1em 15%;
+  padding-top: 3em;
+
+  .footerOut {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .regFP {
+      color: $textLight;
+      margin-bottom: .5em;
+    }
+
+    .flagImg {
+      width: 100px;
+      margin-bottom: .8em;
+    }
+  }
+
+  .footerIn {
+    width: 420px;
+    align-self: flex-end;
+    display: flex;
+    justify-content: center;
+
+    .footerA {
+      color: $textLight;
+      padding: .4em;
+      margin: 0 .4em;
+
+      &:hover {
+        color: $white;
+      }
+    }
+  }
+}
+
+/*   ------   HOMEPAGE   ------   */
+
+.coverImg {
+  position: fixed;
+  top: 60px;
+  z-index: -1;
+  left: 0;
+  background: url('/images/coverImg.jpg');
+  width: 100%;
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+}
+
+.pageContentContainer {
+  margin-top: 560px;
+  background: $background;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .whatContainer {
+    display: flex;
+    max-width: 1200px;
+    align-self: center;
+    margin-top: 3em;
+    margin-bottom: 12em;
+
+    .whatPs {
+      margin-right: 5em;
+
+      .whatP {
+        margin-bottom: .8em;
+      }
+    }
+
+    .whatIll {
+      width: 450px;
+    }
+  }
+
+  .cardContainer {
+    width: 95%;
+    max-width: 1200px;
+    margin-bottom: 2.5em;
+    box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.03);
+    border-radius: 5px;
+    display: flex;
+    padding: 3rem;
+    align-items: center;
+    background: white;
+
+    .cardLeft {
+      margin-right: 3em;
+
+      .cardBtn {
+        border-radius: 5px;
+        background: $buttonPurple;
+        color: $white;
+        font-size: .9rem;
+        padding: .5em 1.1em;
+        border: transparent;
+        margin-top: 1.6em;
+
+        &:hover {
+          background: $buttonPurpleHover;
+          cursor: pointer;
+          transition: .2s;
+        }
+      }
+    }
+
+    .cardImg {
+      width: 300px;
+    }
+  }
+
+  .userCards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 3em;
+    margin-bottom: 6em;
+    width: 95%;
+    max-width: 1200px;
+
+    .userCard {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+      box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.03);
+      border-radius: 5px;
+      background: white;
+      margin-right: 2em;
+      width: calc(33.333% - 1.34em);
+      margin-bottom: 2em;
+
+      .ucImg {
+        border-radius: 50%;
+        width: 80px;
+        margin-bottom: 1em;
+      }
+
+      .ucName {
+        font-size: 1.1rem;
+        font-weight: 500;
+        margin-bottom: .2em;
+      }
+
+      .ucLinks {
+        list-style-type: none;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 1.6em;
+
+        .ucLi {
+          margin-bottom: .65em;
+
+          .ucA {
+            background: $buttonPurple;
+            color: white;
+            font-size: .85rem;
+            padding: .12em .35em;
+            margin: 0 .4em;
+            text-decoration: none;
+            border-radius: 3px;
+
+            &:hover {
+              background: $buttonPurpleHover;
+              transition: .2s;
+            }
+          }
+        }
+      }
+
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+    }
+  }
+}
