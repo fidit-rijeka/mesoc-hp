@@ -267,7 +267,7 @@ footer {
         }
       }
 
-      &:nth-child(3n) {
+      &:nth-child(3n), &:nth-child(7) {
         margin-right: 0;
       }
     }

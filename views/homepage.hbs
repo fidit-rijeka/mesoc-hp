@@ -1,5 +1,8 @@
 {{> nabvar}}
 
+{{!-- TODO:
+Make this page mobile responsive. --}}
+
 <div class="coverImg"></div>
 
 <div class="pageContentContainer">
@@ -10,8 +13,6 @@
       <p class="whatP">To do so, MESOC adapts and further develops a method for “transition based” impact assessment derived from a previous UNESCO Chair publication, building a structural model of the Societal Dimension of Culture, as defined by one of the strategic objectives of the European Agenda.</p>
       <p class="whatP">The model will be tested within 10 European city pilots: Athens, Barcelona, Cluj, Gent, Issy-les-Moulineaux, Milano, Rijeka, Turku, Valencia and Warsaw.</p>
     </div>
-    {{!-- TODO
-    this image has to be replaced with the one on figma which contains MESOC colors --}}
     <img src="/images/undraw_data_processing_yrrv.svg" alt="illustration of MESOC application collecting and processing documents" class="whatIll">
   </div>
 
@@ -19,30 +20,29 @@
     <div class="cardLeft">
       <h2 class="generalH2">Browse results from all over the Europe</h2>
       <p>Aenean commodo arcu eget elit porttitor, nec congue quam auctor. Morbi aliquam eros purus, ut ornare turpis faucibus id. Aliquam venenatis, est sed lacinia feugiat, nisl ligula cursus leo, sit amet efficitur felis mauris vel neque. Donec viverra eros in commodo porttitor. Donec vestibulum massa eu velit venenatis, quis interdum augue commodo. Nunc volutpat maximus luctus. Sed pretium ipsum eu odio laoreet, a luctus nisi tempus.</p>
-      <button class="cardBtn">Browse</button>
+      <a href="http://localhost:3000/browse" target="_blank"><button class="cardBtn">Browse</button></a>
     </div>
-    {{!-- TODO
-    this image has to be replaced with the one on figma which contains MESOC colors --}}
     <img src="/images/undraw_windows_q9m0.svg" alt="illustration of multiple MESOC screens" class="cardImg">
   </div>
   <div class="cardContainer">
     <div class="cardLeft">
       <h2 class="generalH2">Submit your own files for analysis</h2>
       <p>Aenean commodo arcu eget elit porttitor, nec congue quam auctor. Morbi aliquam eros purus, ut ornare turpis faucibus id. Aliquam venenatis, est sed lacinia feugiat, nisl ligula cursus leo, sit amet efficitur felis mauris vel neque. Donec viverra eros in commodo porttitor. Donec vestibulum massa eu velit venenatis, quis interdum augue commodo. Nunc volutpat maximus luctus. Sed pretium ipsum eu odio laoreet, a luctus nisi tempus.</p>
-      <button class="cardBtn">Create account</button>
+      <a href="http://localhost:3000/create-account" target="_blank"><button class="cardBtn">Create account</button></a>
     </div>
-    {{!-- TODO
-    this image has to be replaced with the one on figma which contains MESOC colors --}}
     <img src="/images/undraw_uploading_go67.svg" alt="illustration of multiple MESOC screens" class="cardImg">
   </div>
 
   <h1 class="generalH1">Development team</h1>
   <div class="userCards">
 
+    {{!-- TODO:
+    Update links when everyone submit.
+    PKB is critical -> none submited --}}
     <div class="userCard">
       <img src="/images/profile_BozidarKovacic.jpg" alt="Božidar Kovačić" class="ucImg">
       <span class="ucName">Božidar Kovačić</span>
-      <p class="ucRoles">Role</p>
+      <p class="ucRoles">Work Package Leader</p>
       <ul class="ucLinks">
         <li class="ucLi"><a target="_blank" href="https://portal.uniri.hr/portfelj/1506" class="ucA">UNIRI portfolio</a></li>
       </ul>
@@ -50,7 +50,7 @@
     <div class="userCard">
       <img src="/images/profile_SandaMartincicIpsic.jpg" alt="Sanda Martinčić - Ipšić" class="ucImg">
       <span class="ucName">Sanda Martinčić - Ipšić</span>
-      <p class="ucRoles">Role</p>
+      <p class="ucRoles">Principal Investigator</p>
       <ul class="ucLinks">
         <li class="ucLi"><a target="_blank" href="http://portal.uniri.hr/Portfelj/761" class="ucA">UNIRI portfolio</a></li>
         <li class="ucLi"><a target="_blank" href="https://www.linkedin.com/in/sandamartincic/" class="ucA">LinkedIn</a></li>
@@ -59,7 +59,7 @@
     <div class="userCard">
       <img src="/images/profile_AntoCabraja.jpg" alt="Anto Čabraja" class="ucImg">
       <span class="ucName">Anto Čabraja</span>
-      <p class="ucRoles">Project supervisor</p>
+      <p class="ucRoles">Technical Supervisor</p>
       <ul class="ucLinks">
         <li class="ucLi"><a target="_blank" href="https://github.com/acabraja" class="ucA">Github</a></li>
         <li class="ucLi"><a target="_blank" href="https://www.linkedin.com/in/antocabraja/" class="ucA">LinkedIn</a></li>
@@ -70,7 +70,7 @@
     <div class="userCard">
       <img src="/images/profile_PetarKristijanBogovic.jpg" alt="Petar Kristijan Bogović" class="ucImg">
       <span class="ucName">Petar Kristijan Bogović</span>
-      <p class="ucRoles">Backend developer</p>
+      <p class="ucRoles">Backend Developer, NLP</p>
       <ul class="ucLinks">
         <li class="ucLi"><a target="_blank" href="#" class="ucA">Placeholder</a></li>
       </ul>
@@ -78,7 +78,7 @@
     <div class="userCard">
       <img src="/images/profile_DinoAljevic.jpg" alt="Dino Aljević" class="ucImg">
       <span class="ucName">Dino Aljević</span>
-      <p class="ucRoles">Backend developer</p>
+      <p class="ucRoles">Backend Developer</p>
       <ul class="ucLinks">
         <li class="ucLi"><a target="_blank" href="https://www.linkedin.com/in/daljevic/" class="ucA">LinkedIn</a></li>
       </ul>
@@ -86,7 +86,7 @@
     <div class="userCard">
       <img src="/images/profile_ValentinKuharic.jpg" alt="Valentin Kuharić" class="ucImg">
       <span class="ucName">Valentin Kuharić</span>
-      <p class="ucRoles">Frontend developer</p>
+      <p class="ucRoles">Frontend Developer</p>
       <ul class="ucLinks">
         <li class="ucLi"><a target="_blank" href="https://github.com/Valentin331" class="ucA">Github</a></li>
         <li class="ucLi"><a target="_blank" href="https://www.linkedin.com/in/valentin-kuharic-4468a81a4/" class="ucA">LinkedIn</a></li>
@@ -96,7 +96,7 @@
     <div class="userCard">
       <img src="/images/profile_ErikJermanis.jpg" alt="Erik Jermaniš" class="ucImg">
       <span class="ucName">Erik Jermaniš</span>
-      <p class="ucRoles">Frontend developer</p>
+      <p class="ucRoles">Frontend Developer</p>
       <ul class="ucLinks">
         <li class="ucLi"><a target="_blank" href="https://github.com/ErikJermanis" class="ucA">Github</a></li>
         <li class="ucLi"><a target="_blank" href="https://www.linkedin.com/in/erik-jermanis/" class="ucA">LinkedIn</a></li>
