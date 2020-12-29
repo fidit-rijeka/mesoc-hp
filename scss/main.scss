@@ -23,6 +23,8 @@ body {
   font-weight: 500;
   align-self: center;
   margin-top: 3em;
+  width: 92%;
+  text-align: center;
 }
 
 .generalH2 {
@@ -45,6 +47,7 @@ nav {
   justify-content: flex-end;
   padding: 0 5%;
   box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.04);
+  z-index: 2;
 
   .logoA {
     margin-right: auto;
@@ -65,6 +68,10 @@ nav {
       color: $textDarkHover;
       transition: .2s;
     }
+
+    @media screen and (max-width: 660px) {
+      display: none;
+    }
   }
 
   .secondaryA {
@@ -79,18 +86,176 @@ nav {
       color: $buttonPurpleHover;
       transition: .2s;
     }
+
+    @media screen and (max-width: 660px) {
+      display: none;
+    }
+  }
+
+  .hamburger {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .burgerLines {
+      display: block;
+      position: relative;
+      width: 35px;
+      height: 3px;
+      background: $textDark;
+      transition: .3s;
+
+      &::before {
+        content: '';
+        width: 35px;
+        height: 3px;
+        background: $textDark;
+        position: absolute;
+        top: -11px;
+        left: 0px;
+        transition: .3s;
+      }
+
+      &::after {
+        content: '';
+        width: 35px;
+        height: 3px;
+        background: $textDark;
+        position: absolute;
+        bottom: -11px;
+        left: 0px;
+        transition: .3s;
+      }
+    }
+
+    .hamOpen {
+      background: transparent;
+      transition: .3s;
+
+      &::before {
+        top: 0px;
+        transform: rotate(45deg);
+        transition: .3s;
+      }
+
+      &::after {
+        bottom: 0px;
+        transform: rotate(-45deg);
+        transition: .3s;
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    @media screen and (min-width: 661px) {
+      display: none;
+    }
+  }
+
+  .mobileNavContainer {
+    opacity: 0;
+    pointer-events: none;
+    width: 100%;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: $white;
+    padding: 1em;
+    transition: .3s;
+
+    .mainAPhone {
+      display: block;
+      font-size: 1.1rem;
+      font-weight: 500;
+      text-decoration: none;
+      padding: .7em;
+      width: 100%;
+      text-align: center;
+      margin-bottom: 1em;
+
+      &:hover {
+        color: $textDarkHover;
+        transition: .2s;
+      }
+    }
+
+    .secondaryAPhone {
+      display: block;
+      width: 100%;
+      text-align: center;
+      font-weight: 500;
+      font-size: .95rem;
+      text-decoration: none;
+      padding: .7em;
+      margin-left: .5em;
+      color: $buttonPurple;
+
+      &:hover {
+        color: $buttonPurpleHover;
+        transition: .2s;
+      }
+    }
+
+    @media screen and (min-width: 661px) {
+      display: none;
+    }
+  }
+
+  .navContMActive {
+    opacity: 1;
+    pointer-events: all;
+    transition: .3s;
   }
 }
 
 /*   ------   FOOTER   ------   */
 
 footer {
+  // width: 100%;
+  // background: $sidenavBlue;
+  // display: flex;
+  // align-items: center;
+  // padding: 1em 15%;
+  // padding-top: 3em;
   width: 100%;
   background: $sidenavBlue;
-  display: flex;
-  align-items: center;
-  padding: 1em 15%;
-  padding-top: 3em;
+  padding: 1em;
+
+  .upperFooter {
+    width: 100%;
+    display: flex;
+    padding: 0 15%;
+    margin-bottom: 1.4em;
+
+    @media screen and (max-width: 1400px) {
+      padding: 0 10%;
+    }
+    @media screen and (max-width: 1200px) {
+      padding: 0 5%;
+    }
+    @media screen and (max-width: 1000px) {
+      padding: 0;
+    }
+    @media screen and (max-width: 690px) {
+      flex-direction: column;
+    }
+  }
+
+  .mrFooter {
+    margin-right: 5em;
+
+    @media screen and (max-width: 690px) {
+      margin-right: 0;
+      margin-bottom: 1em;
+    }
+  }
 
   .footerOut {
     width: 50%;
@@ -103,9 +268,17 @@ footer {
       margin-bottom: .5em;
     }
 
+    .centerText {
+      text-align: center;
+    }
+
     .flagImg {
       width: 100px;
       margin-bottom: .8em;
+    }
+
+    @media screen and (max-width: 690px) {
+      width: 100%;
     }
   }
 
@@ -114,6 +287,7 @@ footer {
     align-self: flex-end;
     display: flex;
     justify-content: center;
+    margin: auto;
 
     .footerA {
       color: $textLight;
@@ -123,6 +297,15 @@ footer {
       &:hover {
         color: $white;
       }
+    }
+
+    @media screen and (max-width: 550px) {
+      width: 295px;
+    }
+    @media screen and (max-width:390px) {
+      width: 150px;
+      flex-direction: column;
+      align-items: center;
     }
   }
 }
@@ -151,6 +334,7 @@ footer {
 
   .whatContainer {
     display: flex;
+    width: 95%;
     max-width: 1200px;
     align-self: center;
     margin-top: 3em;
@@ -162,10 +346,30 @@ footer {
       .whatP {
         margin-bottom: .8em;
       }
+
+      @media screen and (max-width: 810px) {
+        margin-right: 0;
+        margin-bottom: 5em;
+      }
     }
 
     .whatIll {
       width: 450px;
+
+      @media screen and (max-width: 1185px) {
+        width: 400px;
+      }
+      @media screen and (max-width: 1000px) {
+        width: 350px;
+      }
+      @media screen and (max-width: 425px) {
+        width: 250px;
+      }
+    }
+
+    @media screen and (max-width: 810px) {
+      flex-direction: column;
+      align-items: center;
     }
   }
 
@@ -176,7 +380,7 @@ footer {
     box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.03);
     border-radius: 5px;
     display: flex;
-    padding: 3rem;
+    padding: 3em;
     align-items: center;
     background: white;
 
@@ -198,10 +402,22 @@ footer {
           transition: .2s;
         }
       }
+
+      @media screen and (max-width: 810px) {
+        margin-right: 0;
+      }
     }
 
     .cardImg {
       width: 300px;
+
+      @media screen and (max-width: 810px) {
+        display: none;
+      }
+    }
+
+    @media screen and (max-width: 425px) {
+      padding: 1.8em;
     }
   }
 
@@ -269,6 +485,26 @@ footer {
 
       &:nth-child(3n), &:nth-child(7) {
         margin-right: 0;
+      }
+
+      @media screen and (max-width: 1000px) {
+        width: calc(50% - 2em);
+
+        &:nth-child(3n) {
+          margin-right: 2em;
+        }
+        
+        &:nth-child(2n) {
+          margin-right: 0;
+        }
+      }
+      @media screen and (max-width: 690px) {
+        width: 100%;
+        margin-right: 0;
+
+        &:nth-child(3) {
+          margin-right: 0;
+        }
       }
     }
   }
