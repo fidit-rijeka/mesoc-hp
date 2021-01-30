@@ -1,11 +1,15 @@
 const express = require('express');
 const exphbs = require('express-handlebars');
 const path = require('path');
+const dotenv = require('dotenv');
+
+// Load enviroment variables
+dotenv.config({ path: "./config/config.env" });
 
 const PORT = process.env.PORT || 4001;
 const app = express();
 
-app.use(express.static('public'));
+app.use(`/${process.env.EXPRESS_RESOURCE_PREFIX}`, express.static('public'));
 
 app.engine('.hbs', exphbs({
   defaultLayout: 'main',
@@ -16,7 +20,8 @@ app.set('view engine', '.hbs');
 
 app.get('/', (req, res) => {
   res.render('homepage', {
-    pageTitle: 'MESOC - welcome'
+    pageTitle: 'MESOC - welcome',
+    resPrefix: `/${process.env.EXPRESS_RESOURCE_PREFIX}`
   })
 });
 
