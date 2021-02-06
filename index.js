@@ -1,8 +1,12 @@
 const express = require('express');
 const exphbs = require('express-handlebars');
-const path = require('path');
+const dotenv = require('dotenv');
+
+// Load enviroment variables
+dotenv.config({ path: "./config/config.env" });
 
 const PORT = process.env.PORT || 4001;
+
 const app = express();
 
 app.use(express.static('public'));
@@ -16,7 +20,25 @@ app.set('view engine', '.hbs');
 
 app.get('/', (req, res) => {
   res.render('homepage', {
-    pageTitle: 'MESOC - welcome'
+    pageTitle: 'MESOC - welcome',
+    webApp: `${process.env.WEBAPP}`
+  })
+});
+
+
+// Privacy
+app.get('/privacy', (req, res) => {
+  res.render('privacy', {
+    pageTitle: 'MESOC - Privacy',
+    webApp: `${process.env.WEBAPP}`
+  })
+});
+
+// Terms and conditions
+app.get('/termsandconditions', (req, res) => {
+  res.render('termsandconditions', {
+    pageTitle: 'MESOC - Terms and conditions',
+    webApp: `${process.env.WEBAPP}`
   })
 });
 
