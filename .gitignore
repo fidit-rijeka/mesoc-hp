@@ -1,7 +1,5 @@
 node_modules/
-<<<<<<< HEAD
+config/config.env
+
 scss/main.css
 scss/main.css.map
-=======
-config/config.env
->>>>>>> 60d3d6273ce8f8741d909fd77028873158fd7039
