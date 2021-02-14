@@ -1,2 +1,5 @@
 node_modules/
 config/config.env
+
+scss/main.css
+scss/main.css.map

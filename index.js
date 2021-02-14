@@ -25,6 +25,23 @@ app.get('/', (req, res) => {
   })
 });
 
+
+// Privacy
+app.get('/privacy', (req, res) => {
+  res.render('privacy', {
+    pageTitle: 'MESOC - Privacy',
+    webApp: `${process.env.WEBAPP}`
+  })
+});
+
+// Terms and conditions
+app.get('/termsandconditions', (req, res) => {
+  res.render('termsandconditions', {
+    pageTitle: 'MESOC - Terms and conditions',
+    webApp: `${process.env.WEBAPP}`
+  })
+});
+
 app.listen(PORT, () => {
   console.log('Server is running on port 4001');
 });
