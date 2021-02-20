@@ -21,7 +21,8 @@ app.set('view engine', '.hbs');
 app.get('/', (req, res) => {
   res.render('homepage', {
     pageTitle: 'MESOC - welcome',
-    webApp: `${process.env.WEBAPP}`
+    webApp: `${process.env.WEBAPP}`,
+    expressDomain: `${process.env.EXPRESS_DOMAIN}`
   })
 });
 
