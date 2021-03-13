@@ -1,0 +1,20 @@
+<div style="display: {{cookieConsent}};" class="consentWrapper">
+  <p class="consentP">This website uses cookies to enhance the user experience. By continuing to use this website and MESOC toolkit application you agree to our <a class="consentA" href="/termsandconditions">terms and conditions</a> and <a class="consentA" href="privacy">privacy policy</a>.</p>
+  <button onclick="consentClick()" class="consentBtn">I understand</button>
+</div>
+
+<script>
+  const setCookie = (name, value, days) => {
+    const today = new Date();
+    today.setTime(today.getTime() + days * 24 * 60 * 60 * 1000);
+    const expires = `expires=${today.toUTCString()}`;
+    document.cookie = `${name}=${value};${expires};path="/"`;
+  };
+  const hideConsent = () => {
+    document.querySelector('.consentWrapper').style = "display: none";
+  };
+  const consentClick = () => {
+    hideConsent();
+    setCookie('mesoc_cca', 'accepted', 365);
+  };
+</script>

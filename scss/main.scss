@@ -40,6 +40,42 @@ body {
   margin-bottom: 0.3em;
 }
 
+/*   ------   COOKIE CONSENT   ------   */
+
+.consentWrapper {
+  background: $sidenavBlue;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  padding: 1.8em;
+  z-index: 100;
+
+  .consentP {
+    color: white;
+
+    .consentA {
+      color: white;
+    }
+  }
+
+  .consentBtn {
+    border-radius: 5px;
+    background: $buttonPurple;
+    color: $white;
+    font-size: .9rem;
+    padding: .5em 1.1em;
+    border: transparent;
+    margin-top: 1.6em;
+
+    &:hover {
+      background: $buttonPurpleHover;
+      cursor: pointer;
+      transition: .2s;
+    }
+  }
+}
+
 /*   ------   NAVBAR   ------   */
 
 nav {
