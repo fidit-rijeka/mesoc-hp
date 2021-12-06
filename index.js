@@ -60,5 +60,5 @@ app.get('/termsandconditions', getCookieConsent, (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log('Server is running on port 4001');
+  console.log(`Server is running on port ${PORT}`);
 });
